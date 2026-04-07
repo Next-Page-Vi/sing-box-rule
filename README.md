@@ -6,7 +6,7 @@ the same relative layout.
 
 ## Configuration
 
-Edit [config.toml](/Users/nextpage/Documents/python/sing-box-rule/config.toml):
+Edit `config.toml`:
 
 - `[source]` defines `repo_url`, `branch`, and the exact `path` to scan in the upstream repo.
 - `[output]` defines the managed output directory plus artifact options.
@@ -35,7 +35,7 @@ uv run python src/main.py build --config config.toml
 
 ## Development
 
-The project includes [uv.toml](/Users/nextpage/Documents/python/sing-box-rule/uv.toml) so `uv`
+The project includes `uv.toml` so `uv`
 uses the USTC PyPI mirror by default in mainland China.
 
 ```bash
