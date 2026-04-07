@@ -1,0 +1,40 @@
+[project]
+name = "sing-box-rule"
+version = "0.1.0"
+description = "Sync Clash list rules from a source repository and build sing-box rule-sets."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
+
+[project.scripts]
+sing-box-rule = "sing_box_rule.cli:main"
+
+[dependency-groups]
+dev = [
+  "pytest>=8.3.5",
+  "ruff>=0.11.5",
+  "ty>=0.0.1a16",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sing_box_rule"]
+
+[tool.ruff]
+target-version = "py313"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.ty.src]
+include = ["src", "tests"]
+
+[tool.ty.environment]
+python-version = "3.13"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]

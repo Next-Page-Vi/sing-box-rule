@@ -1,0 +1,14 @@
+{
+  "rules": [
+    {
+      "domain_suffix": [
+        "5itv.tv",
+        "ocnttv.com"
+      ]
+    },
+    {
+      "ip_cidr": []
+    }
+  ],
+  "version": 2
+}

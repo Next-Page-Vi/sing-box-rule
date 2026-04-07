@@ -1,0 +1,18 @@
+{
+  "rules": [
+    {
+      "domain_suffix": [
+        "att.tv",
+        "atttvnow.com",
+        "attwatchtv.com",
+        "directv.com",
+        "dtvce.com",
+        "nettyinternet.com"
+      ]
+    },
+    {
+      "ip_cidr": []
+    }
+  ],
+  "version": 2
+}

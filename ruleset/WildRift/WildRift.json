@@ -1,0 +1,15 @@
+{
+  "rules": [
+    {
+      "domain_suffix": [
+        "pvp.net",
+        "riotcdn.net",
+        "riotgames.com"
+      ]
+    },
+    {
+      "ip_cidr": []
+    }
+  ],
+  "version": 2
+}

@@ -1,0 +1,16 @@
+{
+  "rules": [
+    {
+      "domain_suffix": [
+        "meipai.com",
+        "meitu.com",
+        "meitudata.com",
+        "meitustat.com"
+      ]
+    },
+    {
+      "ip_cidr": []
+    }
+  ],
+  "version": 2
+}

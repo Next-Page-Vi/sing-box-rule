@@ -1,0 +1,14 @@
+{
+  "rules": [
+    {
+      "domain_suffix": [
+        "gitee.com",
+        "gitee.io"
+      ]
+    },
+    {
+      "ip_cidr": []
+    }
+  ],
+  "version": 2
+}

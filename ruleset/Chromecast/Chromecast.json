@@ -1,0 +1,13 @@
+{
+  "rules": [
+    {
+      "domain_keyword": [
+        "pa.google"
+      ]
+    },
+    {
+      "ip_cidr": []
+    }
+  ],
+  "version": 2
+}

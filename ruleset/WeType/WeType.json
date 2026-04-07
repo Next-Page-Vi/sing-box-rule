@@ -1,0 +1,13 @@
+{
+  "rules": [
+    {
+      "domain": [
+        "wetype.weixin.qq.com"
+      ]
+    },
+    {
+      "ip_cidr": []
+    }
+  ],
+  "version": 2
+}

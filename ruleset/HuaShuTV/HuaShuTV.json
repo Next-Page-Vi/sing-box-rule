@@ -1,0 +1,18 @@
+{
+  "rules": [
+    {
+      "domain_suffix": [
+        "hzcnc.com",
+        "hzdtv.tv",
+        "hzman.net",
+        "wasu.cn",
+        "wasu.tv",
+        "wasumedia.cn"
+      ]
+    },
+    {
+      "ip_cidr": []
+    }
+  ],
+  "version": 2
+}

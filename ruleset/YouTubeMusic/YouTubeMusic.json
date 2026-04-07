@@ -1,0 +1,13 @@
+{
+  "rules": [
+    {
+      "domain": [
+        "music.youtube.com"
+      ]
+    },
+    {
+      "ip_cidr": []
+    }
+  ],
+  "version": 2
+}

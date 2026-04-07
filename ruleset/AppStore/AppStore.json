@@ -1,0 +1,14 @@
+{
+  "rules": [
+    {
+      "domain": [
+        "apps.apple.com",
+        "itunes.apple.com"
+      ]
+    },
+    {
+      "ip_cidr": []
+    }
+  ],
+  "version": 2
+}

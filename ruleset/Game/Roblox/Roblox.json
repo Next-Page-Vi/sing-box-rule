@@ -1,0 +1,18 @@
+{
+  "rules": [
+    {
+      "domain_keyword": [
+        "roblox"
+      ]
+    },
+    {
+      "domain_suffix": [
+        "rbxcdn.com"
+      ]
+    },
+    {
+      "ip_cidr": []
+    }
+  ],
+  "version": 2
+}

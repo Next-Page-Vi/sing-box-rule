@@ -1,0 +1,13 @@
+{
+  "rules": [
+    {
+      "domain": [
+        "lens.l.google.com"
+      ]
+    },
+    {
+      "ip_cidr": []
+    }
+  ],
+  "version": 2
+}

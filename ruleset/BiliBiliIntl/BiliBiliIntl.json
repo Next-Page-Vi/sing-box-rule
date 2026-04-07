@@ -1,0 +1,18 @@
+{
+  "rules": [
+    {
+      "domain_suffix": [
+        "bilibili.tv"
+      ]
+    },
+    {
+      "ip_cidr": []
+    },
+    {
+      "package_name": [
+        "com.bstar.intl"
+      ]
+    }
+  ],
+  "version": 2
+}

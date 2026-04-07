@@ -1,0 +1,13 @@
+{
+  "rules": [
+    {
+      "domain": [
+        "uplaypc-s-ubisoft.cdn.ubi.com"
+      ]
+    },
+    {
+      "ip_cidr": []
+    }
+  ],
+  "version": 2
+}

@@ -1,0 +1,17 @@
+[source]
+repo_url = "https://github.com/blackmatrix7/ios_rule_script"
+branch = "master"
+path = "rule/Clash"
+
+[output]
+directory = "ruleset"
+keep_json = true
+compile_srs = true
+manifest = "build-manifest.json"
+
+[conversion]
+keep_ambiguous_process_name = true
+expand_ip_asn = true
+asn_source = "ripe"
+asn_request_timeout_seconds = 10
+fail_on_asn_lookup_error = false

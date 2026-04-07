@@ -1,0 +1,20 @@
+{
+  "rules": [
+    {
+      "domain_suffix": [
+        "91q.com",
+        "dmhmusic.com",
+        "qianqian.com",
+        "submusic.cn",
+        "taihe.com",
+        "ttplayer.com",
+        "youyou.com",
+        "youyou001.com"
+      ]
+    },
+    {
+      "ip_cidr": []
+    }
+  ],
+  "version": 2
+}

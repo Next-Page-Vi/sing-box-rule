@@ -1,0 +1,13 @@
+{
+  "rules": [
+    {
+      "domain_keyword": [
+        "stripe"
+      ]
+    },
+    {
+      "ip_cidr": []
+    }
+  ],
+  "version": 2
+}

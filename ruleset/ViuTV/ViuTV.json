@@ -1,0 +1,35 @@
+{
+  "rules": [
+    {
+      "domain_suffix": [
+        "cognito-identity.us-east-1.amazonaws.com",
+        "d1k2us671qcoau.cloudfront.net",
+        "d2anahhhmp1ffz.cloudfront.net",
+        "dfp6rglgjqszk.cloudfront.net",
+        "mobileanalytics.us-east-1.amazonaws.com",
+        "viu.com",
+        "viu.now.com",
+        "viu.tv"
+      ]
+    },
+    {
+      "ip_cidr": []
+    },
+    {
+      "package_name": [
+        "com.viu.pad"
+      ]
+    },
+    {
+      "package_name": [
+        "com.viu.phone"
+      ]
+    },
+    {
+      "package_name": [
+        "com.vuclip.viu"
+      ]
+    }
+  ],
+  "version": 2
+}

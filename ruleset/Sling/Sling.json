@@ -1,0 +1,17 @@
+{
+  "rules": [
+    {
+      "domain_suffix": [
+        "dishworld.com",
+        "movenetworks.com",
+        "movetv.com",
+        "sling.com",
+        "slinginternational.com"
+      ]
+    },
+    {
+      "ip_cidr": []
+    }
+  ],
+  "version": 2
+}

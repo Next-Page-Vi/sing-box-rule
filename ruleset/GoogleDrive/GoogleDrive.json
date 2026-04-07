@@ -1,0 +1,26 @@
+{
+  "rules": [
+    {
+      "domain": [
+        "www.googleapis.com"
+      ]
+    },
+    {
+      "domain_suffix": [
+        "docs.google.com",
+        "drive.google.com",
+        "googledrive.com",
+        "googleusercontent.com"
+      ]
+    },
+    {
+      "ip_cidr": []
+    },
+    {
+      "process_name": [
+        "BackupandSync"
+      ]
+    }
+  ],
+  "version": 2
+}

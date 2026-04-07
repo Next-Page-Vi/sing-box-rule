@@ -1,0 +1,18 @@
+{
+  "rules": [
+    {
+      "domain_suffix": [
+        "lastpass.com"
+      ]
+    },
+    {
+      "ip_cidr": []
+    },
+    {
+      "process_name": [
+        "LastPass"
+      ]
+    }
+  ],
+  "version": 2
+}

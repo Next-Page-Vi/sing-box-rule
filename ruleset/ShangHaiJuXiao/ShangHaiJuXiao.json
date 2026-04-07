@@ -1,0 +1,17 @@
+{
+  "rules": [
+    {
+      "domain_suffix": [
+        "bubuying.net",
+        "kuaishuru.net",
+        "mdvdns.com",
+        "mediav.com",
+        "mvad.com"
+      ]
+    },
+    {
+      "ip_cidr": []
+    }
+  ],
+  "version": 2
+}

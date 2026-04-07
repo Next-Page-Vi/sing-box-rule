@@ -1,0 +1,17 @@
+{
+  "rules": [
+    {
+      "domain_suffix": [
+        "acer-group.com",
+        "acer.com",
+        "acer.com.cn",
+        "founderpc.cn",
+        "founderpc.com"
+      ]
+    },
+    {
+      "ip_cidr": []
+    }
+  ],
+  "version": 2
+}
