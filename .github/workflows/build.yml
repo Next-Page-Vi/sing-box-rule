@@ -17,7 +17,7 @@ jobs:
       contents: write
 
     steps:
-      - name: Checkout
+      - name: Checkout source
         uses: actions/checkout@v5
         with:
           persist-credentials: true
@@ -34,11 +34,34 @@ jobs:
       - name: Sync rule files
         run: uv run --no-dev python src/main.py build --config config.toml
 
-      - name: Commit changes
+      - name: Checkout artifact branch
+        uses: actions/checkout@v5
+        with:
+          ref: rule-set
+          path: publish
+          fetch-depth: 1
+        continue-on-error: true
+
+      - name: Prepare artifact branch
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add .
-          git diff --cached --quiet && exit 0
-          git commit -m "chore: update generated rules"
-          git push origin "HEAD:${GITHUB_REF_NAME}"
+          if [ ! -d publish/.git ]; then
+            git clone --branch main --depth 1 . publish
+            git -C publish checkout --orphan rule-set
+            git -C publish rm -rf . >/dev/null 2>&1 || true
+          fi
+          find publish -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          cp -R ruleset publish/ruleset
+          cat > publish/README.md <<'EOF'
+          # rule-set
+
+          Auto-generated sing-box rule-set artifacts.
+          EOF
+
+      - name: Commit artifacts
+        run: |
+          git -C publish config user.name "github-actions[bot]"
+          git -C publish config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C publish add .
+          git -C publish diff --cached --quiet && exit 0
+          git -C publish commit -m "chore: update generated rules"
+          git -C publish push origin HEAD:rule-set

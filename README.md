@@ -20,7 +20,8 @@ The build is intentionally stateless: every run clones the upstream repository w
 into a temporary directory, reads only the configured path, writes generated files into the output
 directory, then removes the temporary clone.
 
-The GitHub Actions workflow only runs the upstream sync and commits regenerated artifacts.
+The GitHub Actions workflow runs from `main` and publishes regenerated artifacts to the
+`rule-set` branch.
 Development checks stay local.
 
 For automatic commits to work, the target branch must allow pushes from `GITHUB_TOKEN` /
@@ -34,9 +35,6 @@ uv run python src/main.py build --config config.toml
 ```
 
 ## Development
-
-The project includes `uv.toml` so `uv`
-uses the USTC PyPI mirror by default in mainland China.
 
 ```bash
 uv run pytest
@@ -55,3 +53,6 @@ directory before each run, then regenerates:
 - `*.srs` compiled rule-set files
 - copied Markdown files
 - `build-manifest.json`
+
+Generated artifacts are published by GitHub Actions to the `rule-set` branch instead of being
+kept on `main`.
