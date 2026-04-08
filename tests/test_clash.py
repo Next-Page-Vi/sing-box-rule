@@ -146,6 +146,19 @@ def test_ip_asn_expands_into_ip_cidr(tmp_path: Path) -> None:
     }
 
 
+def test_empty_ip_cidr_group_is_omitted(tmp_path: Path) -> None:
+    source = tmp_path / "empty-asn.list"
+    source.write_text("DOMAIN,example.com\n", encoding="utf-8")
+
+    parsed = parse_clash_list_file(source, keep_ambiguous_process_name=True)
+    ruleset = build_ruleset(parsed, asn_prefixes={})
+
+    assert ruleset == {
+        "rules": [{"domain": ["example.com"]}],
+        "version": 2,
+    }
+
+
 def test_and_rule_with_unknown_component_is_skipped(tmp_path: Path) -> None:
     source = tmp_path / "logical.list"
     source.write_text(

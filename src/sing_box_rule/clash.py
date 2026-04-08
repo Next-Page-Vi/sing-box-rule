@@ -126,6 +126,10 @@ def build_ruleset(
         for prefixes in asn_prefixes.values():
             ip_cidr_values.update(prefixes)
 
+    grouped_rules = {
+        rule_type: values for rule_type, values in grouped_rules.items() if values
+    }
+
     rules: list[dict[str, object]] = []
     if "domain" in grouped_rules:
         rules.append({"domain": sorted(grouped_rules.pop("domain"))})
