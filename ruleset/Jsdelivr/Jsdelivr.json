@@ -6,9 +6,6 @@
         "jsdelivr.com",
         "jsdelivr.net"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

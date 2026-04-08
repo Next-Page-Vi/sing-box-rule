@@ -12,9 +12,6 @@
       ]
     },
     {
-      "ip_cidr": []
-    },
-    {
       "package_name": [
         "com.jjwxc.reader"
       ]

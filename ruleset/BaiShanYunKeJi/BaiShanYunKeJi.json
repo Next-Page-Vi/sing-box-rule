@@ -62,9 +62,6 @@
         "whitecdnx.com",
         "zzcdnx.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

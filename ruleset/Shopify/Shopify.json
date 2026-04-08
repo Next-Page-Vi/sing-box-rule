@@ -11,9 +11,6 @@
         "shopifystatus.com",
         "shopifysvc.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

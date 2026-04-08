@@ -24,9 +24,6 @@
         "generativeai.google",
         "proactivebackend-pa.googleapis.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

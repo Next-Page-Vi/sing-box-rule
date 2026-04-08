@@ -179,9 +179,6 @@
       ]
     },
     {
-      "ip_cidr": []
-    },
-    {
       "package_name": [
         "com.apple.geod"
       ]

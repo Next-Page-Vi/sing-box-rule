@@ -52,9 +52,6 @@
       ]
     },
     {
-      "ip_cidr": []
-    },
-    {
       "package_name": [
         "com.hbo.hbonow"
       ]

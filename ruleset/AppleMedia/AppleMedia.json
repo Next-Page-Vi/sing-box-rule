@@ -55,9 +55,6 @@
         "tv.apple.com",
         "wwwapplemusic.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

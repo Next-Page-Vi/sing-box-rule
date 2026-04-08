@@ -15,9 +15,6 @@
         "saasexch.cc",
         "saasexch.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

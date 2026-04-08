@@ -12,9 +12,6 @@
         "ampproject.net",
         "ampproject.org"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

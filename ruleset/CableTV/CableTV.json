@@ -5,9 +5,6 @@
         "cabletv.com.hk",
         "i-cable.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

@@ -24,9 +24,6 @@
         "steamserver.net",
         "steamusercontent.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

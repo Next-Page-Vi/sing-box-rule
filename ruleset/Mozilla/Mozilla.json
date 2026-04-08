@@ -24,9 +24,6 @@
         "sentry.prod.mozaws.net",
         "thunderbird.net"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

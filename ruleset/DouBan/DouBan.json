@@ -6,9 +6,6 @@
         "douban.fm",
         "doubanio.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

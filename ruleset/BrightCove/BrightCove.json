@@ -17,9 +17,6 @@
         "zencdn.net",
         "zencoder.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

@@ -32,9 +32,6 @@
         "tracking.miui.com",
         "update.avlyun.sec.miui.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

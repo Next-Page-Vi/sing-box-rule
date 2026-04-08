@@ -177,9 +177,6 @@
       ]
     },
     {
-      "ip_cidr": []
-    },
-    {
       "package_name": [
         "com.disney.datg.videoplatforms.android.abc"
       ]

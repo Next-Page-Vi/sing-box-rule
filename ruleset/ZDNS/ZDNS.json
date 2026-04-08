@@ -15,9 +15,6 @@
         "zdnscloud.net.cn",
         "zdnscloud.org.cn"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

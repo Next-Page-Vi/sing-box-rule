@@ -11,9 +11,6 @@
         "wp.com",
         "wpvip.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

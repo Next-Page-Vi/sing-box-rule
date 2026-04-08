@@ -7,9 +7,6 @@
         "vip.com",
         "vipstatic.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

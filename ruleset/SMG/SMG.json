@@ -7,9 +7,6 @@
         "smg.cn",
         "smg.sh.cn"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

@@ -26,9 +26,6 @@
         "mobile-collector.newrelic.com",
         "uplynk.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

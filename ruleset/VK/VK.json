@@ -10,9 +10,6 @@
         "vk.cc",
         "vk.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

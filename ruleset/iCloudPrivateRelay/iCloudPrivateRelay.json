@@ -13,9 +13,6 @@
         "mask-h2.icloud.com",
         "mask.icloud.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

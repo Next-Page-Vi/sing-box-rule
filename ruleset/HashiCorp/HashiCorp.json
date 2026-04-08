@@ -11,9 +11,6 @@
         "vagrantup.com",
         "vaultproject.io"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

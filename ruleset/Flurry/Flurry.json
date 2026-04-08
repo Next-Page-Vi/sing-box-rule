@@ -4,9 +4,6 @@
       "domain_suffix": [
         "data.flurry.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

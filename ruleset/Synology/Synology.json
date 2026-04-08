@@ -30,9 +30,6 @@
         "synology.com",
         "synology.me"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

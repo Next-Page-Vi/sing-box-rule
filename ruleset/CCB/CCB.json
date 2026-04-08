@@ -21,9 +21,6 @@
         "ccbtrust.com.cn",
         "ccbxt.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

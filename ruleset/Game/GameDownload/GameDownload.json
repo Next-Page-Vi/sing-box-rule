@@ -46,9 +46,6 @@
         "dyn.riotcdn.net",
         "steamcontent.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

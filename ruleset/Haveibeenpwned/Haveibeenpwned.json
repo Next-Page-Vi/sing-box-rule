@@ -5,9 +5,6 @@
         "haveibeenpwned.com",
         "pwnedpasswords.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

@@ -17,9 +17,6 @@
         "cloudflarestaging.com",
         "cloudflarestoragegw.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

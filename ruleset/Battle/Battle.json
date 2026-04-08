@@ -15,9 +15,6 @@
         "battlenet.com.cn",
         "blizzard.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

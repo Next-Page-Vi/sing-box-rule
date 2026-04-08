@@ -4,9 +4,6 @@
       "domain_suffix": [
         "udacity.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

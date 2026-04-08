@@ -5,9 +5,6 @@
         "amp-api.fitness.apple.com",
         "hls-svod.itunes.apple.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

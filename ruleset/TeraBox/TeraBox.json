@@ -5,9 +5,6 @@
         "terabox.com",
         "teraboxcdn.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

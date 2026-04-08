@@ -7,9 +7,6 @@
         "useast.battle.net",
         "uswest.battle.net"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

@@ -9,9 +9,6 @@
         "python.org",
         "pythonhosted.org"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

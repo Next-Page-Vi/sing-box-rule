@@ -19,9 +19,6 @@
         "m.hotmail.com",
         "smtp.yandex.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

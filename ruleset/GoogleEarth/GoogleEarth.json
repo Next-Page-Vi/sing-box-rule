@@ -19,9 +19,6 @@
         "khmdb.googleapis.com",
         "mw1.google.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

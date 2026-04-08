@@ -12,9 +12,6 @@
         "flymodem.net",
         "iotboss.cn"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

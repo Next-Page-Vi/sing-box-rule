@@ -12,9 +12,6 @@
         "wixsite.com",
         "wixstatic.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

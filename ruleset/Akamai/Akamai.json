@@ -9,9 +9,6 @@
         "akamaistream.net",
         "akamaized.net"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

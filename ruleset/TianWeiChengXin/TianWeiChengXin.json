@@ -26,9 +26,6 @@
         "yunssl.cn",
         "yunssl.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

@@ -14,9 +14,6 @@
         "slackdemo.com",
         "slackhq.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

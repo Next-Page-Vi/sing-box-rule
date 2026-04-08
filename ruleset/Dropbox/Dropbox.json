@@ -20,9 +20,6 @@
         "getdropbox.com",
         "paper-attachments.s3.amazonaws.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

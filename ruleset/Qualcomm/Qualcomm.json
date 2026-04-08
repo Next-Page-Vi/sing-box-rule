@@ -48,9 +48,6 @@
         "wirelessreach.com",
         "xtracloud.cn"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

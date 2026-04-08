@@ -1,9 +1,6 @@
 {
   "rules": [
     {
-      "ip_cidr": []
-    },
-    {
       "process_name": [
         "CrashReport.exe"
       ]

@@ -11,9 +11,6 @@
         "teams.live.com",
         "teams.microsoft.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

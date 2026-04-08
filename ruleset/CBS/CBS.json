@@ -39,9 +39,6 @@
       ]
     },
     {
-      "ip_cidr": []
-    },
-    {
       "package_name": [
         "com.showtime.standalone"
       ]

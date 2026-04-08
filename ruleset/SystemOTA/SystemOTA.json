@@ -85,9 +85,6 @@
         "ocsp.apple.com",
         "ocsp.g.aaplimg.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

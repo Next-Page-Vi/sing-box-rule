@@ -106,9 +106,6 @@
       ]
     },
     {
-      "ip_cidr": []
-    },
-    {
       "package_name": [
         "com.hulu.plus"
       ]

@@ -25,9 +25,6 @@
         "zeenews-fonts.s3.amazonaws.com",
         "zeenews.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

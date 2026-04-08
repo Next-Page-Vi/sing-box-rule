@@ -23,9 +23,6 @@
         "wmflabs.org",
         "wmfusercontent.org"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

@@ -7,9 +7,6 @@
         "cns.com.cn",
         "ecns.cn"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

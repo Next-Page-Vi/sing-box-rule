@@ -12,9 +12,6 @@
         "speed.cloudflare.com",
         "speed.dler.io"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

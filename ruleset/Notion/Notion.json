@@ -13,9 +13,6 @@
         "notion.site",
         "notion.so"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

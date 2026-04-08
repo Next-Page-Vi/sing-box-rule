@@ -5,9 +5,6 @@
         "p-cdn.us",
         "pandora.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

@@ -10,9 +10,6 @@
         "anthropic.com",
         "claude.ai"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

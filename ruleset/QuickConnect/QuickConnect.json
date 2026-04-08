@@ -13,9 +13,6 @@
         "quickconnect.com",
         "quickconnect.to"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

@@ -5,9 +5,6 @@
         "themoviedb.org",
         "tmdb.org"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

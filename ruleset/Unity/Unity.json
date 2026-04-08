@@ -14,9 +14,6 @@
       ]
     },
     {
-      "ip_cidr": []
-    },
-    {
       "process_name": [
         "UnityHub.exe"
       ]

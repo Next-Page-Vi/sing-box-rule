@@ -14,9 +14,6 @@
         "cakeapp.me",
         "mycake.me"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

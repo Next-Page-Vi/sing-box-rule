@@ -20,9 +20,6 @@
         "snssdk.com",
         "toutiao.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

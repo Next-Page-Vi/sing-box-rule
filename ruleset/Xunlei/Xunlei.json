@@ -36,9 +36,6 @@
       ]
     },
     {
-      "ip_cidr": []
-    },
-    {
       "process_name": [
         "Thunder"
       ]

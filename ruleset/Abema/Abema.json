@@ -27,9 +27,6 @@
         "hayabusa.media",
         "winticket.jp"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

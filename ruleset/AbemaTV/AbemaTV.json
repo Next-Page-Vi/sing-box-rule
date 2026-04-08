@@ -30,9 +30,6 @@
         "vod-abematv.akamaized.net",
         "winticket.jp"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

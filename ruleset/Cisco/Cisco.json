@@ -121,9 +121,6 @@
         "wifi-mx.com",
         "youtubecisco.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

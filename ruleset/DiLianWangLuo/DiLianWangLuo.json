@@ -17,9 +17,6 @@
         "tlgslb.cn",
         "tlgslb.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

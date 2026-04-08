@@ -85,9 +85,6 @@
         "tw.ntp.org.cn",
         "us.ntp.org.cn"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

@@ -36,9 +36,6 @@
         "surdata.cn",
         "v6pilot.cn"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

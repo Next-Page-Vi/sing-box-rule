@@ -5,9 +5,6 @@
         "mail.icloud.com.cn",
         "mail.me.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

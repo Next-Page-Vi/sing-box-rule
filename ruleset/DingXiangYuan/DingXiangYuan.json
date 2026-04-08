@@ -19,9 +19,6 @@
         "mdnews.cn",
         "pubmed.cn"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

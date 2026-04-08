@@ -56,9 +56,6 @@
         "qnydns.net",
         "staticfile.org"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

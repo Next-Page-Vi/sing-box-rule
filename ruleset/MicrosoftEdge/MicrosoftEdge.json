@@ -7,9 +7,6 @@
         "iecvlist.microsoft.com",
         "msedge.api.cdp.microsoft.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

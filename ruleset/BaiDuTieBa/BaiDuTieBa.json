@@ -39,9 +39,6 @@
       "domain_suffix": [
         "tieba.baidu.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

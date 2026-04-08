@@ -38,9 +38,6 @@
       ]
     },
     {
-      "ip_cidr": []
-    },
-    {
       "package_name": [
         "com.amazon.avod.thirdpartyclient"
       ]

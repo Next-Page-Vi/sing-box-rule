@@ -10,9 +10,6 @@
         "sectigo.com",
         "usertrust.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

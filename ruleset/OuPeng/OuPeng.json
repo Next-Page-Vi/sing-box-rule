@@ -12,9 +12,6 @@
         "oupengcloud.cn",
         "oupengcloud.net"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

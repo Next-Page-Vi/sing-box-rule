@@ -14,9 +14,6 @@
         "docker.io",
         "dockerhub.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

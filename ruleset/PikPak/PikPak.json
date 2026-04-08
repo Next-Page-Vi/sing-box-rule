@@ -14,9 +14,6 @@
         "hub5pr.v6.phub.sandai.net",
         "hubciddata.sandai.net"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

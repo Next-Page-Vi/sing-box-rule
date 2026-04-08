@@ -148,9 +148,6 @@
         "worldsecureemail.com",
         "worldsecuresystems.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

@@ -32,9 +32,6 @@
         "hammerandchisel.ssl.zendesk.com",
         "watchanimeattheoffice.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

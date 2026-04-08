@@ -25,9 +25,6 @@
         "bocservices.com.cn",
         "ftcwifi.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

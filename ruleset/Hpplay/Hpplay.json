@@ -8,9 +8,6 @@
         "mirrorcast.com.cn",
         "mirrorcast.tv"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

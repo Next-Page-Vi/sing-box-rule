@@ -11,9 +11,6 @@
         "weibo.com",
         "weibocdn.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

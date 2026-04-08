@@ -4,9 +4,6 @@
       "domain": [
         "aida.googleapis.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

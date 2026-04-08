@@ -15,9 +15,6 @@
         "herokucharge.com",
         "herokussl.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

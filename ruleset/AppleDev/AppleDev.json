@@ -43,9 +43,6 @@
         "webobjects.com",
         "wpewebkit.org"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

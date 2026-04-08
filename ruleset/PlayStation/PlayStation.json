@@ -7,9 +7,6 @@
         "playstationnetwork.com",
         "sonyentertainmentnetwork.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

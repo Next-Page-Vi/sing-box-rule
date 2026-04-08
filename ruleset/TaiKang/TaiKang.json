@@ -41,9 +41,6 @@
         "tkhealthcare.com",
         "tkmedicare.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

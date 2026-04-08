@@ -6,9 +6,6 @@
         "identrust.com",
         "identrust.net"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

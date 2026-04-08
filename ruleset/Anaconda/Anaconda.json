@@ -7,9 +7,6 @@
         "anaconda.org",
         "conda.io"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2

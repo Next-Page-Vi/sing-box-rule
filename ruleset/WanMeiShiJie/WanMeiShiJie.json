@@ -14,9 +14,6 @@
         "wmupd.com.cn",
         "wmwm.com"
       ]
-    },
-    {
-      "ip_cidr": []
     }
   ],
   "version": 2
