@@ -1,0 +1,159 @@
+{
+  "rules": [
+    {
+      "domain_keyword": [
+        "aria2",
+        "thunder",
+        "xlliveud",
+        "xunlei",
+        "yunpan"
+      ]
+    },
+    {
+      "domain_suffix": [
+        "qbittorrent.org"
+      ]
+    },
+    {
+      "process_name": [
+        "BitComet"
+      ]
+    },
+    {
+      "process_name": [
+        "BitComet.exe"
+      ]
+    },
+    {
+      "process_name": [
+        "BitComet_x64.exe"
+      ]
+    },
+    {
+      "process_name": [
+        "DownloadService"
+      ]
+    },
+    {
+      "process_name": [
+        "DownloadService.exe"
+      ]
+    },
+    {
+      "process_name": [
+        "Folx"
+      ]
+    },
+    {
+      "process_name": [
+        "Folx.exe"
+      ]
+    },
+    {
+      "process_name": [
+        "NetTransport"
+      ]
+    },
+    {
+      "process_name": [
+        "NetTransport.exe"
+      ]
+    },
+    {
+      "process_name": [
+        "Thunder"
+      ]
+    },
+    {
+      "process_name": [
+        "Thunder.exe"
+      ]
+    },
+    {
+      "process_name": [
+        "Transmission"
+      ]
+    },
+    {
+      "process_name": [
+        "Transmission.exe"
+      ]
+    },
+    {
+      "process_name": [
+        "WebTorrent"
+      ]
+    },
+    {
+      "process_name": [
+        "WebTorrent.exe"
+      ]
+    },
+    {
+      "process_name": [
+        "WebTorrentHelper"
+      ]
+    },
+    {
+      "process_name": [
+        "WebTorrentHelper.exe"
+      ]
+    },
+    {
+      "process_name": [
+        "Weiyun"
+      ]
+    },
+    {
+      "process_name": [
+        "Weiyun.exe"
+      ]
+    },
+    {
+      "process_name": [
+        "aria2c"
+      ]
+    },
+    {
+      "process_name": [
+        "aria2c.exe"
+      ]
+    },
+    {
+      "process_name": [
+        "baidunetdisk.exe"
+      ]
+    },
+    {
+      "process_name": [
+        "fdm"
+      ]
+    },
+    {
+      "process_name": [
+        "fdm.exe"
+      ]
+    },
+    {
+      "process_name": [
+        "qbittorrent"
+      ]
+    },
+    {
+      "process_name": [
+        "qbittorrent.exe"
+      ]
+    },
+    {
+      "process_name": [
+        "uTorrent"
+      ]
+    },
+    {
+      "process_name": [
+        "uTorrent.exe"
+      ]
+    }
+  ],
+  "version": 2
+}
