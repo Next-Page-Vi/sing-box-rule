@@ -2280,16 +2280,8 @@
     },
     {
       "package_name": [
-        "com.viu.pad"
-      ]
-    },
-    {
-      "package_name": [
-        "com.viu.phone"
-      ]
-    },
-    {
-      "package_name": [
+        "com.viu.pad",
+        "com.viu.phone",
         "com.vuclip.viu"
       ]
     }

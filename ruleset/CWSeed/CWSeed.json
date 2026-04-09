@@ -15,11 +15,7 @@
     },
     {
       "package_name": [
-        "com.cw.fullepisodes.android"
-      ]
-    },
-    {
-      "package_name": [
+        "com.cw.fullepisodes.android",
         "com.cw.seed.android"
       ]
     }

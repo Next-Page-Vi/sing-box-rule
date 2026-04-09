@@ -261,176 +261,40 @@
     },
     {
       "process_name": [
-        "BaiduNetdisk_mac"
-      ]
-    },
-    {
-      "process_name": [
-        "BitComet"
-      ]
-    },
-    {
-      "process_name": [
-        "ClashX"
-      ]
-    },
-    {
-      "process_name": [
-        "DownloadService"
-      ]
-    },
-    {
-      "process_name": [
-        "Folx"
-      ]
-    },
-    {
-      "process_name": [
-        "LocalSend"
-      ]
-    },
-    {
-      "process_name": [
-        "LogiOptions"
-      ]
-    },
-    {
-      "process_name": [
-        "LogiOptionsDaemon"
-      ]
-    },
-    {
-      "process_name": [
-        "NetTransport"
-      ]
-    },
-    {
-      "process_name": [
-        "SunloginClient_Desktop"
-      ]
-    },
-    {
-      "process_name": [
-        "SunloginClient_Helper"
-      ]
-    },
-    {
-      "process_name": [
-        "Thunder"
-      ]
-    },
-    {
-      "process_name": [
-        "ThunderVIP"
-      ]
-    },
-    {
-      "process_name": [
-        "Transmission"
-      ]
-    },
-    {
-      "process_name": [
-        "UUBooster"
-      ]
-    },
-    {
-      "process_name": [
-        "WebTorrent"
-      ]
-    },
-    {
-      "process_name": [
-        "WebTorrentHelper"
-      ]
-    },
-    {
-      "process_name": [
-        "amuled"
-      ]
-    },
-    {
-      "process_name": [
-        "aria2c"
-      ]
-    },
-    {
-      "process_name": [
-        "clash"
-      ]
-    },
-    {
-      "process_name": [
-        "cloudflared"
-      ]
-    },
-    {
-      "process_name": [
-        "fdm"
-      ]
-    },
-    {
-      "process_name": [
-        "parsecd"
-      ]
-    },
-    {
-      "process_name": [
-        "privoxy"
-      ]
-    },
-    {
-      "process_name": [
-        "qBittorrent"
-      ]
-    },
-    {
-      "process_name": [
-        "qbittorrent-nox"
-      ]
-    },
-    {
-      "process_name": [
-        "ss-local"
-      ]
-    },
-    {
-      "process_name": [
-        "tailscaled"
-      ]
-    },
-    {
-      "process_name": [
-        "transmission-daemon"
-      ]
-    },
-    {
-      "process_name": [
-        "transmission-qt"
-      ]
-    },
-    {
-      "process_name": [
-        "trojan"
-      ]
-    },
-    {
-      "process_name": [
-        "trojan-go"
-      ]
-    },
-    {
-      "process_name": [
-        "uTorrent"
-      ]
-    },
-    {
-      "process_name": [
-        "v2ray"
-      ]
-    },
-    {
-      "process_name": [
+        "BaiduNetdisk_mac",
+        "BitComet",
+        "ClashX",
+        "DownloadService",
+        "Folx",
+        "LocalSend",
+        "LogiOptions",
+        "LogiOptionsDaemon",
+        "NetTransport",
+        "SunloginClient_Desktop",
+        "SunloginClient_Helper",
+        "Thunder",
+        "ThunderVIP",
+        "Transmission",
+        "UUBooster",
+        "WebTorrent",
+        "WebTorrentHelper",
+        "amuled",
+        "aria2c",
+        "clash",
+        "cloudflared",
+        "fdm",
+        "parsecd",
+        "privoxy",
+        "qBittorrent",
+        "qbittorrent-nox",
+        "ss-local",
+        "tailscaled",
+        "transmission-daemon",
+        "transmission-qt",
+        "trojan",
+        "trojan-go",
+        "uTorrent",
+        "v2ray",
         "xray"
       ]
     }

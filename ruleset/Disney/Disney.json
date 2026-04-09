@@ -178,11 +178,7 @@
     },
     {
       "package_name": [
-        "com.disney.datg.videoplatforms.android.abc"
-      ]
-    },
-    {
-      "package_name": [
+        "com.disney.datg.videoplatforms.android.abc",
         "com.disney.disneyplus"
       ]
     }

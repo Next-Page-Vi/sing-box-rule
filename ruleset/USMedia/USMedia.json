@@ -107,11 +107,7 @@
     },
     {
       "package_name": [
-        "com.hulu.plus"
-      ]
-    },
-    {
-      "package_name": [
+        "com.hulu.plus",
         "com.showtime.standalone"
       ]
     },

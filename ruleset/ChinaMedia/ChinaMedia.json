@@ -423,31 +423,11 @@
     },
     {
       "package_name": [
-        "com.bilibili.app.blue"
-      ]
-    },
-    {
-      "package_name": [
-        "com.bilibili.app.in"
-      ]
-    },
-    {
-      "package_name": [
-        "com.bilibili.comic"
-      ]
-    },
-    {
-      "package_name": [
-        "com.bilibili.comic.intl"
-      ]
-    },
-    {
-      "package_name": [
-        "tv.danmaku.bili"
-      ]
-    },
-    {
-      "package_name": [
+        "com.bilibili.app.blue",
+        "com.bilibili.app.in",
+        "com.bilibili.comic",
+        "com.bilibili.comic.intl",
+        "tv.danmaku.bili",
         "tv.danmaku.bilibilihd"
       ]
     }

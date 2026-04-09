@@ -37,11 +37,7 @@
     },
     {
       "process_name": [
-        "Thunder"
-      ]
-    },
-    {
-      "process_name": [
+        "Thunder",
         "Thunder.exe"
       ]
     }

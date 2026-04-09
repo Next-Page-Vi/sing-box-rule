@@ -75,31 +75,15 @@
     },
     {
       "package_name": [
-        "nekox.messenger"
-      ]
-    },
-    {
-      "package_name": [
-        "org.telegram.messenger"
-      ]
-    },
-    {
-      "package_name": [
-        "tw.nekomimi.nekogram"
-      ]
-    },
-    {
-      "package_name": [
+        "nekox.messenger",
+        "org.telegram.messenger",
+        "tw.nekomimi.nekogram",
         "xyz.nextalone.nagram"
       ]
     },
     {
       "process_name": [
-        "Telegram.exe"
-      ]
-    },
-    {
-      "process_name": [
+        "Telegram.exe",
         "telegram-desktop"
       ]
     }

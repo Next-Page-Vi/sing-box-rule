@@ -23,11 +23,7 @@
     },
     {
       "package_name": [
-        "com.tencent.qqlivei18n"
-      ]
-    },
-    {
-      "package_name": [
+        "com.tencent.qqlivei18n",
         "com.tencent.qqlivei18n.us"
       ]
     }

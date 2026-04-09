@@ -1598,66 +1598,22 @@
     },
     {
       "package_name": [
-        "com.apple.Maps"
-      ]
-    },
-    {
-      "package_name": [
+        "com.apple.Maps",
         "com.apple.geod"
       ]
     },
     {
       "process_name": [
-        "CoreLocationAgent"
-      ]
-    },
-    {
-      "process_name": [
-        "LookupViewService"
-      ]
-    },
-    {
-      "process_name": [
-        "Music"
-      ]
-    },
-    {
-      "process_name": [
-        "TV"
-      ]
-    },
-    {
-      "process_name": [
-        "WeatherWidget"
-      ]
-    },
-    {
-      "process_name": [
-        "apsd"
-      ]
-    },
-    {
-      "process_name": [
-        "findmydevice-user-agent"
-      ]
-    },
-    {
-      "process_name": [
-        "fmfd"
-      ]
-    },
-    {
-      "process_name": [
-        "mapspushd"
-      ]
-    },
-    {
-      "process_name": [
-        "netbiosd"
-      ]
-    },
-    {
-      "process_name": [
+        "CoreLocationAgent",
+        "LookupViewService",
+        "Music",
+        "TV",
+        "WeatherWidget",
+        "apsd",
+        "findmydevice-user-agent",
+        "fmfd",
+        "mapspushd",
+        "netbiosd",
         "trustd"
       ]
     }

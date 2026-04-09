@@ -33,11 +33,7 @@
     },
     {
       "package_name": [
-        "com.iqiyi.i18n"
-      ]
-    },
-    {
-      "package_name": [
+        "com.iqiyi.i18n",
         "com.iqiyi.i18n.tv"
       ]
     }

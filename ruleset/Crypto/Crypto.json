@@ -215,16 +215,8 @@
     },
     {
       "process_name": [
-        "Binance.exe"
-      ]
-    },
-    {
-      "process_name": [
-        "Huobi.exe"
-      ]
-    },
-    {
-      "process_name": [
+        "Binance.exe",
+        "Huobi.exe",
         "OKX.exe"
       ]
     }

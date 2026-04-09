@@ -682,11 +682,7 @@
     },
     {
       "process_name": [
-        "OneDrive"
-      ]
-    },
-    {
-      "process_name": [
+        "OneDrive",
         "OneDriveUpdater"
       ]
     }

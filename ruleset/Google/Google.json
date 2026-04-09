@@ -720,31 +720,15 @@
     },
     {
       "package_name": [
-        "com.android.vending"
-      ]
-    },
-    {
-      "package_name": [
-        "com.google.android.gms"
-      ]
-    },
-    {
-      "package_name": [
-        "com.google.android.gsf"
-      ]
-    },
-    {
-      "package_name": [
+        "com.android.vending",
+        "com.google.android.gms",
+        "com.google.android.gsf",
         "com.google.android.play.games"
       ]
     },
     {
       "process_name": [
-        "BackupandSync"
-      ]
-    },
-    {
-      "process_name": [
+        "BackupandSync",
         "GoogleDriveFS.exe"
       ]
     }
