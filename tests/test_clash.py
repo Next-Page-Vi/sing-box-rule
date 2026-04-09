@@ -105,6 +105,44 @@ def test_process_name_is_classified_into_package_or_process_or_ambiguous(tmp_pat
     )
 
 
+def test_process_name_rules_are_grouped_by_type(tmp_path: Path) -> None:
+    source = tmp_path / "download.list"
+    source.write_text(
+        "\n".join(
+            [
+                "PROCESS-NAME,BitComet_x64.exe",
+                "PROCESS-NAME,DownloadService",
+                "PROCESS-NAME,DownloadService.exe",
+                "PROCESS-NAME,Folx",
+                "PROCESS-NAME,Folx.exe",
+                "PROCESS-NAME,NetTransport",
+                "PROCESS-NAME,NetTransport.exe",
+            ]
+        ),
+        encoding="utf-8",
+    )
+
+    result = parse_clash_list_file(source, keep_ambiguous_process_name=True)
+
+    assert build_ruleset(result) == {
+        "rules": [
+            {
+                "process_name": [
+                    "BitComet_x64.exe",
+                    "DownloadService",
+                    "DownloadService.exe",
+                    "Folx",
+                    "Folx.exe",
+                    "NetTransport",
+                    "NetTransport.exe",
+                ]
+            }
+        ],
+        "version": 2,
+    }
+    assert result.diagnostics == []
+
+
 def test_android_package_name_allows_numeric_later_segments(tmp_path: Path) -> None:
     source = tmp_path / "package.list"
     source.write_text("PROCESS-NAME,com.example.123app\n", encoding="utf-8")

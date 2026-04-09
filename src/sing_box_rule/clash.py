@@ -41,6 +41,13 @@ class ParseResult:
     diagnostics: list[RuleDiagnostic] = field(default_factory=list)
 
 
+@dataclass(frozen=True)
+class ProcessNameParseResult:
+    grouped_entry: tuple[str, str] | None = None
+    logical_rule: dict[str, object] | None = None
+    diagnostic: str | None = None
+
+
 def parse_clash_list_file(path: Path, *, keep_ambiguous_process_name: bool) -> ParseResult:
     grouped_rules: dict[str, set[str]] = defaultdict(set)
     logical_rules: list[dict[str, object]] = []
@@ -75,15 +82,17 @@ def parse_clash_list_file(path: Path, *, keep_ambiguous_process_name: bool) -> P
             keep_ambiguous_process_name=keep_ambiguous_process_name,
         )
         if process_rule is not None:
-            logical_rule, diagnostic = process_rule
-            if logical_rule is not None:
-                logical_rules.append(logical_rule)
-            if diagnostic is not None:
+            if process_rule.grouped_entry is not None:
+                rule_type, value = process_rule.grouped_entry
+                grouped_rules[rule_type].add(value)
+            if process_rule.logical_rule is not None:
+                logical_rules.append(process_rule.logical_rule)
+            if process_rule.diagnostic is not None:
                 diagnostics.append(
                     RuleDiagnostic(
                         severity="warning",
                         source=f"{path}:{line_number}",
-                        message=diagnostic,
+                        message=process_rule.diagnostic,
                     )
                 )
             continue
@@ -181,7 +190,7 @@ def _parse_process_name_rule(
     line: str,
     *,
     keep_ambiguous_process_name: bool,
-) -> tuple[dict[str, object] | None, str | None] | None:
+) -> ProcessNameParseResult | None:
     parts = [part.strip() for part in line.split(",")]
     if len(parts) < 2 or parts[0] != "PROCESS-NAME":
         return None
@@ -191,14 +200,14 @@ def _parse_process_name_rule(
         return None
 
     if _looks_like_android_package_name(value):
-        return {"package_name": [value]}, None
+        return ProcessNameParseResult(grouped_entry=("package_name", value))
 
     if _looks_like_process_name(value):
-        return {"process_name": [value]}, None
+        return ProcessNameParseResult(grouped_entry=("process_name", value))
 
     if keep_ambiguous_process_name:
-        return (
-            {
+        return ProcessNameParseResult(
+            logical_rule={
                 "type": "logical",
                 "mode": "or",
                 "rules": [
@@ -206,10 +215,10 @@ def _parse_process_name_rule(
                     {"process_name": [value]},
                 ],
             },
-            "ambiguous PROCESS-NAME preserved as logical or(process_name, package_name)",
+            diagnostic="ambiguous PROCESS-NAME preserved as logical or(process_name, package_name)",
         )
 
-    return None, "ambiguous PROCESS-NAME skipped"
+    return ProcessNameParseResult(diagnostic="ambiguous PROCESS-NAME skipped")
 
 
 def _infer_rule_from_single_token(token: str) -> tuple[str, str] | None:
