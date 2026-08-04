@@ -58,6 +58,8 @@ uv run --no-editable sing-box-rule build --config config.toml
 The command prints warnings for skipped or ambiguous rules, then reports how many list files were
 converted and how many Markdown files were copied.
 
+Generated version 2 rule-sets require sing-box 1.10.0 or newer.
+
 ## GitHub Actions
 
 The repository is structured so that source code stays on `main`, while generated artifacts are

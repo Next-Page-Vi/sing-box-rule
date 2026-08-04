@@ -10,6 +10,10 @@ from typing import cast
 
 from .models import RuleDiagnostic
 
+RuleValue = str | int
+
+# Only include Clash rule types with equivalent sing-box headless rule fields.
+# GEOIP has no headless equivalent, while URL-REGEX matches a full URL rather than a domain.
 MAP_DICT: dict[str, str] = {
     "DOMAIN-SUFFIX": "domain_suffix",
     "HOST-SUFFIX": "domain_suffix",
@@ -25,17 +29,15 @@ MAP_DICT: dict[str, str] = {
     "IP-CIDR6": "ip_cidr",
     "IP6-CIDR": "ip_cidr",
     "SRC-IP-CIDR": "source_ip_cidr",
-    "GEOIP": "geoip",
     "DST-PORT": "port",
     "SRC-PORT": "source_port",
-    "URL-REGEX": "domain_regex",
     "DOMAIN-REGEX": "domain_regex",
 }
 
 
 @dataclass(frozen=True)
 class ParseResult:
-    grouped_rules: dict[str, set[str]]
+    grouped_rules: dict[str, set[RuleValue]]
     logical_rules: list[dict[str, object]]
     ip_asn_refs: dict[str, list[str]]
     diagnostics: list[RuleDiagnostic] = field(default_factory=list)
@@ -49,7 +51,7 @@ class ProcessNameParseResult:
 
 
 def parse_clash_list_file(path: Path, *, keep_ambiguous_process_name: bool) -> ParseResult:
-    grouped_rules: dict[str, set[str]] = defaultdict(set)
+    grouped_rules: dict[str, set[RuleValue]] = defaultdict(set)
     logical_rules: list[dict[str, object]] = []
     ip_asn_refs: dict[str, list[str]] = defaultdict(list)
     diagnostics: list[RuleDiagnostic] = []
@@ -135,9 +137,7 @@ def build_ruleset(
         for prefixes in asn_prefixes.values():
             ip_cidr_values.update(prefixes)
 
-    grouped_rules = {
-        rule_type: values for rule_type, values in grouped_rules.items() if values
-    }
+    grouped_rules = {rule_type: values for rule_type, values in grouped_rules.items() if values}
 
     rules: list[dict[str, object]] = []
     if "domain" in grouped_rules:
@@ -158,7 +158,7 @@ def ruleset_to_json(ruleset: dict[str, object]) -> str:
     return json.dumps(ruleset, ensure_ascii=False, indent=2) + "\n"
 
 
-def _parse_standard_rule(line: str) -> tuple[str, str] | None:
+def _parse_standard_rule(line: str) -> tuple[str, RuleValue] | None:
     parts = [part.strip() for part in line.split(",")]
     if len(parts) < 2:
         return _infer_rule_from_single_token(line)
@@ -172,6 +172,19 @@ def _parse_standard_rule(line: str) -> tuple[str, str] | None:
     cleaned_address = address.strip().strip("'").strip('"')
     if not cleaned_address:
         return None
+
+    if mapped in {"ip_cidr", "source_ip_cidr"} and not _is_ip_network(cleaned_address):
+        return None
+
+    if mapped in {"port", "source_port"}:
+        try:
+            port = int(cleaned_address)
+        except ValueError:
+            return None
+        if not 1 <= port <= 65535:
+            return None
+        return mapped, port
+
     return mapped, cleaned_address
 
 
@@ -221,7 +234,7 @@ def _parse_process_name_rule(
     return ProcessNameParseResult(diagnostic="ambiguous PROCESS-NAME skipped")
 
 
-def _infer_rule_from_single_token(token: str) -> tuple[str, str] | None:
+def _infer_rule_from_single_token(token: str) -> tuple[str, RuleValue] | None:
     cleaned = token.strip().strip("'").strip('"')
     if not cleaned:
         return None
@@ -239,23 +252,18 @@ def _infer_rule_from_single_token(token: str) -> tuple[str, str] | None:
 
 def _parse_logical_and_rule(line: str) -> dict[str, object] | None:
     components = re.findall(r"([A-Za-z0-9-]+,[^()]+)", line)
-    parsed_rules: list[dict[str, str]] = []
+    parsed_rules: list[dict[str, object]] = []
     for component in components:
-        matched = False
-        for keyword, mapped in MAP_DICT.items():
-            if component.startswith(f"{keyword},"):
-                value = component.split(",", 1)[1].strip()
-                if value:
-                    parsed_rules.append({mapped: value})
-                    matched = True
-                break
-        if not matched:
+        entry = _parse_standard_rule(component)
+        if entry is None:
             return None
+        rule_type, value = entry
+        parsed_rules.append({rule_type: value})
 
     if not parsed_rules:
         return None
 
-    sorted_rules = _sort_list_of_dicts(cast(list[dict[str, object]], parsed_rules))
+    sorted_rules = _sort_list_of_dicts(parsed_rules)
     return {"mode": "and", "rules": sorted_rules, "type": "logical"}
 
 
@@ -308,9 +316,7 @@ def _sort_nested_dict(obj: object) -> object:
         return {key: _sort_nested_dict(obj[key]) for key in sorted(obj)}
     if isinstance(obj, list):
         if all(isinstance(item, dict) for item in obj):
-            sorted_items = [
-                _sort_nested_dict(item) for item in obj if isinstance(item, dict)
-            ]
+            sorted_items = [_sort_nested_dict(item) for item in obj if isinstance(item, dict)]
             typed_items = cast(list[dict[str, object]], sorted_items)
             return _sort_list_of_dicts(typed_items)
         return [_sort_nested_dict(item) for item in obj]

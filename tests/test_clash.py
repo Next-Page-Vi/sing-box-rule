@@ -233,3 +233,111 @@ def test_and_rule_supports_lowercase_components(tmp_path: Path) -> None:
         "version": 2,
     }
     assert result.diagnostics == []
+
+
+def test_port_rules_are_emitted_as_numbers(tmp_path: Path) -> None:
+    source = tmp_path / "ports.list"
+    source.write_text(
+        "\n".join(
+            [
+                "DST-PORT,443",
+                "SRC-PORT,5353",
+                "AND,((DOMAIN,example.com),(DST-PORT,8443))",
+            ]
+        ),
+        encoding="utf-8",
+    )
+
+    result = parse_clash_list_file(source, keep_ambiguous_process_name=True)
+
+    assert build_ruleset(result) == {
+        "rules": [
+            {
+                "mode": "and",
+                "rules": [{"domain": "example.com"}, {"port": 8443}],
+                "type": "logical",
+            },
+            {"port": [443]},
+            {"source_port": [5353]},
+        ],
+        "version": 2,
+    }
+    assert result.diagnostics == []
+
+
+def test_rules_without_sing_box_equivalents_are_skipped(tmp_path: Path) -> None:
+    source = tmp_path / "unsupported.list"
+    source.write_text(
+        "\n".join(
+            [
+                "GEOIP,CN",
+                "URL-REGEX,^https://example\\.com/path",
+            ]
+        ),
+        encoding="utf-8",
+    )
+
+    result = parse_clash_list_file(source, keep_ambiguous_process_name=True)
+
+    assert build_ruleset(result) == {"rules": [], "version": 2}
+    assert [diagnostic.message for diagnostic in result.diagnostics] == [
+        "unsupported or malformed rule, skipped",
+        "unsupported or malformed rule, skipped",
+    ]
+
+
+def test_malformed_cidr_and_port_rules_are_skipped(tmp_path: Path) -> None:
+    source = tmp_path / "malformed.list"
+    source.write_text(
+        "\n".join(
+            [
+                "IP-CIDR,not-a-cidr",
+                "DST-PORT,0",
+                "DST-PORT,65536",
+                "SRC-PORT,not-a-port",
+            ]
+        ),
+        encoding="utf-8",
+    )
+
+    result = parse_clash_list_file(source, keep_ambiguous_process_name=True)
+
+    assert build_ruleset(result) == {"rules": [], "version": 2}
+    assert len(result.diagnostics) == 4
+    assert all(
+        diagnostic.message == "unsupported or malformed rule, skipped"
+        for diagnostic in result.diagnostics
+    )
+
+
+def test_google_style_rules_preserve_all_supported_categories(tmp_path: Path) -> None:
+    source = tmp_path / "Google.list"
+    source.write_text(
+        "\n".join(
+            [
+                "DOMAIN,voice.telephony.goog",
+                "DOMAIN-SUFFIX,google.com",
+                "DOMAIN-KEYWORD,google",
+                "IP-CIDR,172.110.32.0/21,no-resolve",
+                "IP-CIDR6,2620:120:e000::/40,no-resolve",
+                "PROCESS-NAME,GoogleDriveFS.exe",
+                "PROCESS-NAME,com.google.android.gms",
+            ]
+        ),
+        encoding="utf-8",
+    )
+
+    result = parse_clash_list_file(source, keep_ambiguous_process_name=True)
+
+    assert build_ruleset(result) == {
+        "rules": [
+            {"domain": ["voice.telephony.goog"]},
+            {"domain_keyword": ["google"]},
+            {"domain_suffix": ["google.com"]},
+            {"ip_cidr": ["172.110.32.0/21", "2620:120:e000::/40"]},
+            {"package_name": ["com.google.android.gms"]},
+            {"process_name": ["GoogleDriveFS.exe"]},
+        ],
+        "version": 2,
+    }
+    assert result.diagnostics == []

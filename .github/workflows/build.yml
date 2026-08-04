@@ -26,6 +26,13 @@ jobs:
       - name: Install uv
         uses: astral-sh/setup-uv@v7
 
+      - name: Run checks
+        run: |
+          uv run --no-editable pytest
+          uv run --no-editable ruff check .
+          uv run --no-editable ruff format --check .
+          uv run --no-editable ty check
+
       - name: Install sing-box
         run: |
           curl -fsSL https://sing-box.app/install.sh | sh
