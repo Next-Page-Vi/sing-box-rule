@@ -3,7 +3,7 @@
   "source_branch": "master",
   "source_path": "rule/Clash",
   "output_directory": "ruleset",
-  "generated_at": "2026-11-03T22:49:12.536850+00:00",
+  "generated_at": "2026-11-04T23:07:37.385855+00:00",
   "converted": [
     {
       "source": "115/115.list",
@@ -8286,7 +8286,7 @@
     {
       "severity": "warning",
       "message": "ambiguous PROCESS-NAME preserved as logical or(process_name, package_name)",
-      "source": "/tmp/sing-box-rule-9uj764eb/repo/rule/Clash/Direct/Direct.list:266"
+      "source": "/tmp/sing-box-rule-3qkiryic/repo/rule/Clash/Direct/Direct.list:266"
     }
   ]
 }
